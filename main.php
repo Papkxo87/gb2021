@@ -11,6 +11,7 @@ session_start();
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta http-equiv="refresh">
     <title>Guetbook</title>
 
 </head>
@@ -25,10 +26,6 @@ session_start();
         <?php
         unset($_SESSION["empty_msg"]);
     }
-
-
-
-
 
     if (isset($_SESSION["ban_time"])) {
         $rest_ban_time = 20 - (time() - $_SESSION["ban_time"]);
@@ -53,17 +50,7 @@ session_start();
                 include_once "ux.php";
                 htmlTable();
                 ?>
-                <form action="add.php" method="post">
-                    <div class="form-floating">
-                        <textarea name="msg" class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Коментарий</label>
-                    </div>
-                    <div class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">Имя или Никнейм</span>
-                        <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Отправить</button>
-                </form>
+
             </div>
             <div class="col-sm">
 
